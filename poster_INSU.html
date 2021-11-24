@@ -2,81 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="generator" content="pandoc" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-<title>Estimation de la température du couvert et comparaison de méthodes d’estimation de la conductance stomatique sur le site ICOS FR-Bil.</title>
-
-<script src="poster_INSU_files/header-attrs-2.11/header-attrs.js"></script>
-
-
-
-<style type="text/css">pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */</style>
 
 
 <!--
@@ -88,28 +16,179 @@ Font-awesome icons ie github or twitter
 <!--
 Google fonts api stuff
 -->
-<link href='https://fonts.googleapis.com/css?family=Raleway Bold' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 
-<!--
-Here are the required style attributes for css to make this poster work :)
--->
+
+
+<title>Estimation de la température du couvert et comparaison de méthodes d’estimation de la conductance stomatique sur le site ICOS FR-Bil.</title>
+
+<script src="poster_INSU_files/header-attrs-2.11/header-attrs.js"></script>
+
+
+
+
+
 <style>
 @page {
-size: 36in 48in;
+size: 45in 38in;
 margin: 0;
 padding: 0;
 }
 body {
-margin: 0px;
-padding: 0px;
-width: 36in;
-height: 48in;
+margin: 0;
+font-size: 40px;
+width: 45in;
+height: 38in;
+padding: 0;
 text-align: justify;
-font-size: 45px;
-line-height: 1.05;
+font-family: Raleway;
 }
-/* RMarkdown Class Styles */
+.poster_wrap {
+width: 45in;
+height: 38in;
+padding: 0cm;
+}
+.title_container {
+width: 45in;
+height: calc(38in * 0.15);
+overflow: hidden;
+background-color: #275662;
+border: 0 solid #FFFFFF;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #275662;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #275662;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Raleway;
+}
+/* unvisited link */
+a:link {
+color: #cc0000;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #cc0000;
+}
+
+/* mouse over link */
+a:hover {
+color: #cc0000;
+}
+
+/* selected link */
+a:active {
+color: #cc0000;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #275662;
+-moz-column-rule-color: #275662;
+column-rule-color: #275662;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 80px;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(45in + 0 + 0);
+height: calc(38in * 0.83);
+padding-top: calc(38in * 0.005);
+padding-bottom: calc(38in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #FFFFFF;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #275662;
+background-color: #275662;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
 /* center align leaflet map,
 from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
 .html-widget {
@@ -127,297 +206,71 @@ background-color: #dddddd40;
 border-radius: 4mm;
 padding: 4mm;
 width: 75%;
-margin: auto;
-margin-top: 1em;
-margin-bottom: 1em;
 /* align-items: center; */
+margin: auto;
+padding-left: 2cm;
 }
 code.sourceCode.r{
 background-color: transparent;
 font-size: 20pt;
 border-radius: 2mm;
 }
-code {
+.caption {
 font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
 font-family: monospace;
-background-color: #27566224;
+background-color: #FFFFFF24;
 color: #275662;
 padding: 1.2mm;
-line-height: 1;
 border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
 }
 caption {
 margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
 font-size: 20pt;
-font-style: italic;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #27566220;
-}
-.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
-  border-spacing: 0;
-  font-size: 40%;
-  border-style: none;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 1em;
-  padding-left: 1em;
-  line-height: 1em;
-}
-table {
-  margin: auto;
-}
-th {
-  padding-left: 5mm;
-  padding-right: 5mm;
-}
-.caption {
-font-size: 20pt;
-font-style: italic;
-padding-top: 0;
-}
-.references {
-font-size: 20px;
-line-height: 90%;
-}
-/* Create three unequal columns that floats next to each other */
-.column {
-float: left;
-padding: 0px;
-}
-.outer {
-width: 36in;
-height: calc(48in *  (1 - 0.2 - 0.1 - 0.01) );
--webkit-column-count: 3; /* Chrome, Safari, Opera */
--moz-column-count: 3; /* Firefox */
-column-count: 3;
--webkit-column-fill: auto;
--moz-column-fill: auto;
-column-fill: auto;
-column-gap: 0;
-padding-left: 0cm;
-padding-right: 0cm;
-/* -webkit-column-rule-width: 50%;
--moz-column-rule-width: 50%;
-column-rule-width: 50%; */
--webkit-column-rule-style: none;
--moz-column-rule-style: none;
-column-rule-style: none;
--webkit-column-rule-color: black;
--moz-column-rule-color: black;
-column-rule-color: black;
-background-color: #ffffff;
-font-family: Raleway;
-margin-top: calc(48in *  0.2 );
-padding-top: 1em;
-padding-bottom: 1em;
-}
-span.citation {
-  color: #275662;
-  font-weight: bold;
-}
-a {
-text-decoration: none;
-color: #275662;
-}
-#title {
-font-size: 80px;
-text-align: left;
-margin: 0;
-line-height: 98%;
-border-bottom: 0;
-font-weight: normal;
-background: 0;
-}
-#author {
-color: #275662;
-margin: 0;
-line-height: 85%;
-font-size: 1.17em;
-}
-#affiliation {
-padding-top: 0.1em;
-color: ;
-font-style: italic;
-font-size: 25px;
-margin: 0;
-}
-sup {
-color: #cc0000;
-}
-.affiliation sup {
-font-size: 20px;
-}
-.author {
-text-align: left;
-}
-.author sup {
-font-size: 30px;
-}
-.author_extra {
-color: #275662;
-margin: 0;
-line-height: 85%;
-font-size: 35px;
-text-align: left;
-}
-.outer h1, h2, h3, h4, h5, h6 {
-text-align: center;
-margin: 0;
-font-weight: bold;
-}
-.section h1 {
-  text-align:center;
-  padding-bottom:5px;
-  background:
-    linear-gradient(
-      to left,
-      #ffffff 1%,
-      #ffffff 20%,
-      #27566275 33%,
-      #275662 50%,
-      #27566275 66%,
-      #ffffff 80%,
-      #ffffff 99%
-    )
-    left
-    bottom
-    #ffffff
-    no-repeat;
-  background-size:100% 5px ;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-.outer h2 {
-text-align: center;
-}
-.outer p, .level2 {
-color: #000000;
-}
-.outer ol {
-padding-left: 8%;
-padding-right: 8%;
-text-align: left;
-}
-.main {
-width: 36in;
-height: calc(48in * 0.2);
-position: absolute;
-background-color: #275662;
-color: #ffffff90;
-font-family: Raleway Bold;
-background-image: linear-gradient(#275662 50%,#275662);
-}
-.main strong {
-color: #ffffff;
-}
-.main strong > sup {
-color: #ffffff;
-}
-.main sup {
-color: #ffffff90;
-}
-#main-img-left {
-width: 10%;
-left: 0.5in;
-bottom: 0.2in;
-position: absolute;
-}
-#main-img-center {
-width: 10%;
-left: calc(36in * 0.45);
-bottom: 0.5in;
-position: absolute;
-}
-#main-img-right {
-width: 10%;
-right: 0.5in;
-bottom: 0.2in;
-position: absolute;
-}
-.main p {
-font-size: 100px;
-font-family: Raleway Bold;
-text-align: left;
-margin: 0;
-position: absolute;
-top: 50%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
-margin-left: 1em;
-}
-.fab {
-color: #00000030;
-font-size: 25px;
-}
-.twitter, i {
-color: #00000030;
-font-size: 35px;
-text-decoration: none;
-}
-a.email {
-text-decoration: none;
-color: #00000030;
-font-size: 35px;
-}
-.envelope {
-color: #00000030;
-font-size: 5px;
-text-decoration: none;
-}
-.poster_wrap {
-width: 36in;
-height: 48in;
-padding: 0cm;
-}
-.main_bottom {
-width: 36in;
-height: calc(48in * 0.1);
-margin-top: calc(48in * (1 - 0.1));
-position: absolute;
-background-color: #275662;
-background-image: linear-gradient(#275662 10%, #275662);
-}
-.section {
-  padding-left: 10mm;
-  padding-right: 10mm;
-}
-span > #tab:mytable {
-  font-weight: bold;
 }
 .orcid img {
-  width: 3%;
-}
-.emphasis {
-  background-color: #008080;
-  color: #ffffff;
-  border: solid #0b2045 3mm;
-  margin: 1em;
-  padding-left: 0;
-  padding-right: 0;
-}
-.emphasis h1 {
-  font-weight: bold;
-  background: none;
-  background-color: #0b2045;
-  padding-bottom: 5mm;
-  padding-top: 1mm;
-  margin-top: -1mm;
-  margin-right: -1mm;
-  margin-left: -1mm;
-}
-.emphasis blockquote {
-  border: 0;
-}
-.emphasis ol {
-  padding: 0;
-  padding-left: 8%;
-  font-size: 100%;
-  font-weight: bold;
-}
-.emphasis p {
-  color: #ffffff;
+  width: 1em;
 }
 </style>
 </head>
@@ -425,376 +278,150 @@ span > #tab:mytable {
 
 
 <div class="poster_wrap">
-
-<div class="column outer">
-<div class="section">
-<h1 id="title">Estimation de la température du couvert et comparaison de méthodes d’estimation de la conductance stomatique sur le site ICOS FR-Bil.</h1><br>
-<h3 id="author" class="author">
-
-<strong>Tom Taborski</strong><sup> 1, <a class="orcid" href="https://orcid.org/0000-0002-1099-3857"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup><br>
-
-<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:tom.taborski@inrae.fr" class="email">tom.taborski@inrae.fr</a> <br>
-   </h3>
-
-<h5 id="author_extra", class="author_extra">
- Christophe Chipeaux<sup>1</sup>
- Jean-Christophe Domec<sup>1</sup>
- Denis Loustau<sup>1</sup>
-</h5>
-
-
-<p id="affiliation" class="affiliation">
-<sup>1</sup> ISPA, Bordeaux Sciences Agro, INRAE, F-33140, Villenave d’Ornon, France
-</p>
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src= 'poster_INSU_files/logos.png' style="width: 80%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Estimation de la température du couvert et comparaison de méthodes d’estimation de la conductance stomatique sur le site ICOS FR-Bil.</h1>
+<h3 id="author"><strong>Tom Taborski</strong><sup>1, <a class="orcid" href="https://orcid.org/0000-0002-1099-3857"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>, Nicolas Devert<sup>1</sup>, Christophe Chipeaux<sup>1</sup>, Jean-Christophe Domec<sup>1</sup>, Denis Loustau<sup>1</sup></h3><br>
+<h5 id="affiliation"><sup>1</sup> ISPA, Bordeaux Sciences Agro, INRAE, F-33140, Villenave d’Ornon, France</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=poster_INSU_files/QR_INSU_poster.png style="width: 80%">
+</div>
 </div>
 
+<div class='poster_body_wrap'>
+<div class='poster_body'>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>La température foliaire (<span class="math inline">\(T_f\)</span>) est un paramètre impactant fortement les processus physiques et biochimiques de cet organe. Pour autant sa mesure sans biai à toujours été un défi pour les biologistes. Le développement de caméras thermiques à fortes résolution permet aujourd’hui sans perturber l’environnement des feuilles (aiguilles dans notre cas) de mesure la température de surface de ces organes.</p>
-<div id="objectives" class="section level2">
-<h2>Objectives</h2>
+<p>A travers cette étude, nous souhaitons mettre en évidence comment la mesure de la température de surface foliaire (<span class="math inline">\(T_f\)</span>) nous permet d’ améliorer notre compréhension des interactions ecosystème-atmosphère. <span class="math inline">\(T_f\)</span> est une des variables sur lesquels les biologistes ont déployé beaucoup d’effort avec des méthodes souvent intrusives. Le déploiement de caméras thermiques semble être une piste prometteuse du fait de la non intrusivité et de la fiabilité du capteur. Pour autant peu d’études ont cherchées à mesurer sur des périodes “longues” la température de surface: <span class="citation"><a href="#ref-bowlingLimitationsWinterSpring2018" role="doc-biblioref">Bowling et al.</a> (<a href="#ref-bowlingLimitationsWinterSpring2018" role="doc-biblioref">2018</a>)</span>, <span class="citation"><a href="#ref-kimCanopySkinTemperature2016" role="doc-biblioref">Kim et al.</a> (<a href="#ref-kimCanopySkinTemperature2016" role="doc-biblioref">2016</a>)</span> sans perturber l’environnement des feuilles (aiguilles dans notre cas) de mesure la température de surface de ces organes.</p>
+</div>
+<div id="objectifs" class="section level1">
+<h1>Objectifs</h1>
 <ol style="list-style-type: decimal">
 <li>Déployer et valider un dispositif de mesure de la température foliaire sur le long terme</li>
 <li>utiliser une équation de flux pour estimer la conductance stomatique</li>
 <li>Comparer cette estimation à d’autres méthodse plus classiques.</li>
 </ol>
 </div>
-</div>
-<div id="methods" class="section level1">
-<h1>Methods</h1>
-<p>I will show here how to include poster elements that may be useful, such as an equation using mathjax:</p>
-<p><span class="math display">\[
-E = mc^2
-\]</span></p>
-<p>To reference a citation you can add your <code>.bib</code> file to the working directory and name it in the YAML metadata or generate an automated one as done here, then you only need to reference the label value in the <code>.bib</code> file. For example this package is built on top of the wonderful {pagedown} package and I will cite it at the end of this sentance using this in the rmd <code>[@R-pagedown]</code> <span class="citation">(<a href="#ref-R-pagedown" role="doc-biblioref">Xie et al. 2021</a>)</span>.</p>
-<p>To get a better understanding of how to include features like these please refer to the {posterdown} <a href="https://github.com/posterdown/wiki">wiki</a>.</p>
-<p><strong><em>Now on to the results!</em></strong></p>
-</div>
-<div id="results" class="section level1">
-<h1>Results</h1>
-<p>Here you may have some figures to show off, bellow I have made a scatterplot with the infamous Iris dataset and I can even reference to the figure automatically like this, <code>Figure \@ref(fig:irisfigure)</code>, Figure <a href="#fig:irisfigure">1</a>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:irisfigure"></span>
-<img src="poster_INSU_files/figure-html/irisfigure-1.png" alt="Here is a caption for the figure. This can be added by using the &quot;fig.cap&quot; option in the r code chunk options, see this [link](https://yihui.name/knitr/options/#plots) from the legend himself, [Yihui Xie](https://twitter.com/xieyihui)." width="80%" />
+<div id="site-détude" class="section level1">
+<h1>Site d’étude</h1>
+<p>Site ICOS de classe 2 installé au sein d’une pinède de 15 ans au sud Ouest de Bordeaux. En 2020 la densité des arbres était de <span class="math inline">\(991 ~arbres~ha^{-1}\)</span> avec une hauteur, un DBH et un LAI moyen respectivement de 9.43 m, 0.145 m et 1.6.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:site-scheme"></span>
+<img src="poster_INSU_files/Bilos_general2.png" alt="Schéma du site expérimental. En violet les capteurs ICOS et en rouge les capteurs spécfiques à mon étude." width="100%" />
 <p class="caption">
-Figure 1: Here is a caption for the figure. This can be added by using the “fig.cap” option in the r code chunk options, see this <a href="https://yihui.name/knitr/options/#plots">link</a> from the legend himself, <a href="https://twitter.com/xieyihui">Yihui Xie</a>.
+Figure 1: Schéma du site expérimental. En violet les capteurs ICOS et en rouge les capteurs spécfiques à mon étude.
 </p>
 </div>
-<p>Maybe you want to show off some of that fancy code you spent so much time on to make that figure, well you can do that too! Just use the <code>echo=TRUE</code> option in the r code chunk options, Figure <a href="#fig:myprettycode">2</a>!</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#trim whitespace</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#plot boxplots</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(iris<span class="sc">$</span>Sepal.Width<span class="sc">~</span>iris<span class="sc">$</span>Species,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">&quot;#008080&quot;</span>, </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">border =</span> <span class="st">&quot;#0b4545&quot;</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;Sepal Width (cm)&quot;</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;Species&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:myprettycode"></span>
-<img src="poster_INSU_files/figure-html/myprettycode-1.png" alt="Boxplots, so hot right now!" width="80%" />
-<p class="caption">
-Figure 2: Boxplots, so hot right now!
+<p><br />
+<br />
+<br />
+<br />
+<br />
 </p>
 </div>
-<p>How about a neat table of data? See, Table <a href="#tab:iristable">1</a>:</p>
+<div id="température-foliaire" class="section level1">
+<h1>Température foliaire</h1>
+<p>traitement et validation:</p>
+<ul>
+<li>sélection de régions d’intérêts</li>
+<li>appliquation des corrections dues:
+<ul>
+<li>à l’atmosphère - T, RH</li>
+<li>à l’objet: emissivité - taille du pixel</li>
+<li>au boîtier de la caméra - <span class="math inline">\(T_{vitre}\)</span>, <span class="math inline">\(T_{boîtier}\)</span></li>
+</ul></li>
+<li>validation avec une cible de référence.</li>
+</ul>
+<p>Utilisation extensive du package Thermimage <span class="citation">(<a href="#ref-tattersallThermimageThermalImage2019" role="doc-biblioref">Tattersall 2019</a>)</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ROIS"></span>
+<img src="poster_INSU_files/ROIS_resized.jpeg" alt="Surface temperature acquired with the TIR camera (sc655sc, FLIR Systems, USA). Image taken the 30th of July at 15H12 (UTC)." width="100%" />
+<p class="caption">
+Figure 2: Surface temperature acquired with the TIR camera (sc655sc, FLIR Systems, USA). Image taken the 30th of July at 15H12 (UTC).
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Ts-distri"></span>
+<img src="poster_INSU_files/figure_Ts_VPD_distri_resized.jpeg" alt="temperature difference and VPD distribution over the 2020 summer." width="100%" />
+<p class="caption">
+Figure 3: temperature difference and VPD distribution over the 2020 summer.
+</p>
+</div>
+<p>Pour la pinède étudiée, un très faible découplage thermique a été observé (0.3 K en moyenne) et des extremums d’écarts de températures allant de -2 à 5 K . De tels résultats ont été trouvé pour des peuplements similaires au pin maritime qui tendent à maximiser le couplage aérodynamique: <em>pinus halepensis</em> <span class="citation">(<a href="#ref-mullerEvidenceEfficientNonevaporative2021" role="doc-biblioref">Muller et al. 2021</a>)</span>.</p>
+</div>
+<div id="comparaison-de-méthodes-de-conductances-stomatiques" class="section level1">
+<h1>comparaison de méthodes de conductances stomatiques</h1>
 <table>
-<caption>
-<span id="tab:iristable">Table 1: </span>A table made with the <strong>knitr::kable</strong> function.
-</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center;">
-Sepal <br> Length
-</th>
-<th style="text-align:center;">
-Sepal <br> Width
-</th>
-<th style="text-align:center;">
-Petal <br> Length
-</th>
-<th style="text-align:center;">
-Petal <br> Width
-</th>
-<th style="text-align:center;">
-Species
-</th>
+<tr class="header">
+<th>Méthodes</th>
+<th>équation</th>
+<th>abbrv-couleur</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center;">
-5.1
-</td>
-<td style="text-align:center;">
-3.5
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-<td style="text-align:center;">
-setosa
-</td>
+<tr class="odd">
+<td>Penman-Monteith</td>
+<td><span class="math inline">\(\mathrm{g_s} = \frac{ \lambda \cdot E \cdot g_a \cdot \gamma}{\Delta \cdot A + \rho \cdot c_p \cdot VPD - \lambda \cdot E \cdot (\Delta + \gamma) }\)</span></td>
+<td>PMT - violet</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-4.9
-</td>
-<td style="text-align:center;">
-3.0
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-<td style="text-align:center;">
-setosa
-</td>
+<tr class="even">
+<td>équations de flux “simplifié”</td>
+<td><span class="math inline">\(\mathrm{g_s} = \frac{K(T_{air}) \cdot E}{VPD}\)</span></td>
+<td>GT’ - orange</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-4.7
-</td>
-<td style="text-align:center;">
-3.2
-</td>
-<td style="text-align:center;">
-1.3
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.6
-</td>
-<td style="text-align:center;">
-3.1
-</td>
-<td style="text-align:center;">
-1.5
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-5.0
-</td>
-<td style="text-align:center;">
-3.6
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-5.4
-</td>
-<td style="text-align:center;">
-3.9
-</td>
-<td style="text-align:center;">
-1.7
-</td>
-<td style="text-align:center;">
-0.4
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.6
-</td>
-<td style="text-align:center;">
-3.4
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.3
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-5.0
-</td>
-<td style="text-align:center;">
-3.4
-</td>
-<td style="text-align:center;">
-1.5
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.4
-</td>
-<td style="text-align:center;">
-2.9
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.9
-</td>
-<td style="text-align:center;">
-3.1
-</td>
-<td style="text-align:center;">
-1.5
-</td>
-<td style="text-align:center;">
-0.1
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-5.4
-</td>
-<td style="text-align:center;">
-3.7
-</td>
-<td style="text-align:center;">
-1.5
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.8
-</td>
-<td style="text-align:center;">
-3.4
-</td>
-<td style="text-align:center;">
-1.6
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.8
-</td>
-<td style="text-align:center;">
-3.0
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.1
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.3
-</td>
-<td style="text-align:center;">
-3.0
-</td>
-<td style="text-align:center;">
-1.1
-</td>
-<td style="text-align:center;">
-0.1
-</td>
-<td style="text-align:center;">
-setosa
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-5.8
-</td>
-<td style="text-align:center;">
-4.0
-</td>
-<td style="text-align:center;">
-1.2
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-<td style="text-align:center;">
-setosa
-</td>
+<tr class="odd">
+<td>équations de flux</td>
+<td><span class="math inline">\(\mathrm{g_w} = \frac{P \cdot E}{0.662 \cdot \rho \cdot (e_s(T_{f})- e_a)}\)</span></td>
+<td>GT - vert</td>
 </tr>
 </tbody>
 </table>
+<div class="figure" style="text-align: center">
+<img src="poster_INSU_files/figure_daily_gs.jpeg" alt="Cinétiques journalières de la conductance stomatique pour l'été 2020." width="100%" />
+<p class="caption">
+(#fig:daily_gs)Cinétiques journalières de la conductance stomatique pour l’été 2020.
+</p>
+</div>
+</div>
+<div id="conclusions" class="section level1">
+<h1>Conclusions</h1>
+<ul>
+<li>Faible découplage thermique du à un couplage atmosphérique fort</li>
+<li>bonne adéquation entre les différentes méthodes de <span class="math inline">\(g_s\)</span></li>
+<li>différences les plus fortes lorsqu’il y a des stress faibles/moyens.
+# remerciements ?</li>
+</ul>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-R-pagedown" class="csl-entry">
-Xie, Yihui, Romain Lesur, Brent Thorne, and Xianying Tan. 2021. <em>Pagedown: Paginate the HTML Output of r Markdown with CSS for Print</em>. <a href="https://github.com/rstudio/pagedown">https://github.com/rstudio/pagedown</a>.
+<div id="ref-bowlingLimitationsWinterSpring2018" class="csl-entry">
+Bowling, David R., Barry A. Logan, Koen Hufkens, Donald M. Aubrecht, Andrew D. Richardson, Sean P. Burns, William R. L. Anderegg, Peter D. Blanken, and David P. Eiriksson. 2018. <span>“Limitations to <span>Winter</span> and <span>Spring Photosynthesis</span> of a <span>Rocky Mountain Subalpine Forest</span>.”</span> <em>Agricultural and Forest Meteorology</em> 252 (April): 241–55. <a href="https://doi.org/10.1016/j.agrformet.2018.01.025">https://doi.org/10.1016/j.agrformet.2018.01.025</a>.
+</div>
+<div id="ref-kimCanopySkinTemperature2016" class="csl-entry">
+Kim, Youngil, Christopher J. Still, Chad V. Hanson, Hyojung Kwon, Burke T. Greer, and Beverly E. Law. 2016. <span>“Canopy Skin Temperature Variations in Relation to Climate, Soil Temperature, and Carbon Flux at a Ponderosa Pine Forest in Central <span>Oregon</span>.”</span> <em>Agricultural and Forest Meteorology</em> 226–227 (October): 161–73. <a href="https://doi.org/10.1016/j.agrformet.2016.06.001">https://doi.org/10.1016/j.agrformet.2016.06.001</a>.
+</div>
+<div id="ref-mullerEvidenceEfficientNonevaporative2021" class="csl-entry">
+Muller, Jonathan D., Eyal Rotenberg, Fyodor Tatarinov, Itay Oz, and Dan Yakir. 2021. <span>“Evidence for Efficient Non-Evaporative Leaf-to-Air Heat Dissipation in a Pine Forest Under Drought Conditions.”</span> <em>bioRxiv</em>, April, 2021.02.01.429145. <a href="https://doi.org/10.1101/2021.02.01.429145">https://doi.org/10.1101/2021.02.01.429145</a>.
+</div>
+<div id="ref-tattersallThermimageThermalImage2019" class="csl-entry">
+Tattersall, Glenn J. 2019. <span>“Thermimage: Thermal <span>Image Analysis</span>.”</span>
+</div>
+</div>
 </div>
 </div>
 </div>
 
-</div>
-<div class="main">
-<p>La mesure de la température foliaire en utilisant une es caméra thermique est non intrusif et précis.<br><br> Ceci permet d’améliorer notre compréhension de la réponse des écosystèmes à leur environnement.</p>
-</div>
-<div class="main_bottom">
-<img id="main-img-left" src=poster_INSU_files/logos.png>
-<img id="main-img-center" src=>
-<img id="main-img-right" src=poster_INSU_files/QR_INSU_poster.png>
-</div>
 </div>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

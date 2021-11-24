@@ -9,6 +9,9 @@ author:
     main: true
     orcid: '0000-0002-1099-3857'
     email: tom.taborski@inrae.fr
+  - name: "Nicolas Devert"
+    affil: 1
+    main: false
   - name: "Christophe Chipeaux"
     affil: 1
     main: false
@@ -23,26 +26,28 @@ affiliation:
   - num: 1
     address: ISPA, Bordeaux Sciences Agro, INRAE, F-33140, Villenave d’Ornon, France
 main_findings:
-  - "La mesure de la température foliaire en utilisant une es caméra thermique est non intrusif et précis."
+  - "La mesure de la température foliaire en utilisant une caméra thermique est non intrusif et précis."
   - "Ceci permet d'améliorer notre compréhension de la réponse des écosystèmes à leur environnement."
 logoleft_name: poster_INSU_files/logos.png
 logoright_name: poster_INSU_files/QR_INSU_poster.png
 output: 
-  posterdown::posterdown_betterport:
+  posterdown::posterdown_html:
     self_contained: false
     pandoc_args: --mathjax
     number_sections: false
-bibliography: packages.bib
+bibliography: "/home/ttaborski/Zotero/My_Library.bib"
 link-citations: true
 
 primary_colour: "#275662"
-secondary_colour: "#275662"
+secondary_colour: "#FFFFFF"
 title_textsize: "80px"
-main_textsize: "100px"
+main_textsize: "20px"
 main_textalign: "left"
 font_family: "Raleway"
 main_fontfamily: "Raleway Bold"
 main_height: "30in"
+body_textsize: "40px"
+sectitle2_bgc: "#275662"
 ---
 
 ```{r, include=FALSE}
@@ -53,72 +58,70 @@ knitr::opts_chunk$set(echo = FALSE,
                       fig.align = 'center',
                       out.width = "100%")
 options(knitr.table.format = "html") 
+
+#knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
 ```
 
 # Introduction
 
-La température foliaire ($T_f$) est un paramètre impactant fortement les processus physiques et biochimiques de cet organe. Pour autant sa mesure sans biai à toujours été un défi pour les biologistes. Le développement de caméras thermiques à fortes résolution permet aujourd'hui sans perturber l'environnement des feuilles (aiguilles dans notre cas) de mesure la température de surface de ces organes.
+A travers cette étude, nous souhaitons mettre en évidence comment la mesure de la température de surface foliaire ($T_f$) nous permet d' améliorer notre compréhension des interactions ecosystème-atmosphère. $T_f$ est une des variables sur lesquels les biologistes ont déployé beaucoup d'effort avec des méthodes souvent intrusives. Le déploiement de caméras thermiques semble être une piste prometteuse du fait de la non intrusivité et de la fiabilité du capteur. Pour autant peu d'études ont cherchées à mesurer sur des périodes "longues" la température de surface: @bowlingLimitationsWinterSpring2018, @kimCanopySkinTemperature2016 sans perturber l'environnement des feuilles (aiguilles dans notre cas) de mesure la température de surface de ces organes.
 
-```{r, include=FALSE}
-knitr::write_bib(c('posterdown', 'rmarkdown','pagedown'), 'packages.bib')
-```
-
-## Objectives
+# Objectifs
 
 1. Déployer et valider un dispositif de mesure de la température foliaire sur le long terme
 3. utiliser une équation de flux pour estimer la conductance stomatique
 4. Comparer cette estimation à d'autres méthodse plus classiques. 
 
-# Methods
+# Site d'étude
 
-I will show here how to include poster elements that may be useful, such as an equation using mathjax:
+Site ICOS de classe 2 installé au sein d'une pinède de 15 ans au sud Ouest de Bordeaux. En 2020 la densité des arbres était de $991 ~arbres~ha^{-1}$ avec une hauteur, un DBH et un LAI moyen respectivement de 9.43 m, 0.145 m et 1.6.
 
-$$
-E = mc^2
-$$
+```{r, site-scheme, fig.cap = "Schéma du site expérimental. En violet les capteurs ICOS et en rouge les capteurs spécfiques à mon étude.", fig.height=3,fig.width=1}
+knitr::include_graphics("poster_INSU_files/Bilos_general2.png")
+```
+\
+\
+\
+\
+\
 
-To reference a citation you can add your `.bib` file to the working directory and name it in the YAML metadata or generate an automated one as done here, then you only need to reference the label value in the `.bib` file. For example this package is built on top of the wonderful {pagedown} package and I will cite it at the end of this sentance using this in the rmd `[@R-pagedown]` [@R-pagedown].
+# Température foliaire
+traitement et validation:
 
-To get a better understanding of how to include features like these please refer to the {posterdown} [wiki](https://github.com/posterdown/wiki).
+- sélection de régions d'intérêts 
+- appliquation des corrections dues:
+    - à l'atmosphère - T, RH
+    - à l'objet: emissivité - taille du pixel
+    - au boîtier de la caméra - $T_{vitre}$, $T_{boîtier}$
+- validation avec une cible de référence. 
+    
+Utilisation extensive du package Thermimage [@tattersallThermimageThermalImage2019]
 
-**_Now on to the results!_**
-
-# Results
-
-Here you may have some figures to show off, bellow I have made a scatterplot with the infamous Iris dataset and I can even reference to the figure automatically like this, `Figure \@ref(fig:irisfigure)`, Figure \@ref(fig:irisfigure).
-
-```{r, irisfigure, fig.cap='Here is a caption for the figure. This can be added by using the "fig.cap" option in the r code chunk options, see this [link](https://yihui.name/knitr/options/#plots) from the legend himself, [Yihui Xie](https://twitter.com/xieyihui).', out.width="80%"}
-par(mar=c(2,2,0,1))
-plot(x = iris$Sepal.Length, y = iris$Sepal.Width,
-     col = iris$Species, pch = 19, xlab = "Sepal Length",
-     ylab = "Sepal Width")
+```{r, ROIS, fig.cap = "Surface temperature acquired with the TIR camera (sc655sc, FLIR Systems, USA). Image taken the 30th of July at 15H12 (UTC)."}
+knitr::include_graphics("poster_INSU_files/ROIS_resized.jpeg")
 ```
 
-Maybe you want to show off some of that fancy code you spent so much time on to make that figure, well you can do that too! Just use the `echo=TRUE` option in the r code chunk options, Figure \@ref(fig:myprettycode)!
+```{r, Ts-distri,fig.cap = "temperature difference and VPD distribution over the 2020 summer."}
+knitr::include_graphics("poster_INSU_files/figure_Ts_VPD_distri_resized.jpeg")
+```
+Pour la pinède étudiée, un très faible découplage thermique a été observé (0.3 K en moyenne) et des extremums d'écarts de températures allant de -2 à 5 K . De tels résultats ont été trouvé pour des peuplements similaires au pin maritime qui tendent à maximiser le couplage aérodynamique: *pinus halepensis* [@mullerEvidenceEfficientNonevaporative2021].
 
-```{r myprettycode, echo=TRUE, fig.cap='Boxplots, so hot right now!', fig.height=6, out.width="80%"}
-#trim whitespace
-par(mar=c(2,2,0,0))
-#plot boxplots
-boxplot(iris$Sepal.Width~iris$Species,
-        col = "#008080", 
-        border = "#0b4545",
-        ylab = "Sepal Width (cm)",
-        xlab = "Species")
+# comparaison de méthodes de conductances stomatiques
+
+|Méthodes|équation|abbrv-couleur|
+|--|--|--|
+|Penman-Monteith |$\mathrm{g_s} = \frac{ \lambda \cdot E \cdot g_a \cdot \gamma}{\Delta \cdot A + \rho \cdot c_p \cdot VPD - \lambda \cdot E \cdot (\Delta + \gamma) }$|PMT - violet|
+|équations de flux "simplifié"|$\mathrm{g_s} = \frac{K(T_{air}) \cdot E}{VPD}$|GT' - orange|
+|équations de flux |$\mathrm{g_w} = \frac{P \cdot E}{0.662 \cdot \rho \cdot (e_s(T_{f})- e_a)}$|GT - vert|
+
+```{r, daily_gs, fig.cap="Cinétiques journalières de la conductance stomatique pour l'été 2020."}
+knitr::include_graphics("poster_INSU_files/figure_daily_gs.jpeg")
 ```
 
-How about a neat table of data? See, Table \@ref(tab:iristable):
-
-```{r, iristable}
-knitr::kable(
-  iris[1:15,1:5], format = "html",
-  caption = "A table made with the **knitr::kable** function.",
-  align = "c", col.names = c("Sepal <br> Length",
-                             "Sepal <br> Width",
-                             "Petal <br> Length",
-                             "Petal <br> Width",
-                             "Species"),
-  escape = FALSE)
-```
+# Conclusions
+- Faible découplage thermique du à un couplage atmosphérique fort 
+- bonne adéquation entre les différentes méthodes de $g_s$
+- différences les plus fortes lorsqu'il y a des stress faibles/moyens. 
+# remerciements ? 
 
 # References
